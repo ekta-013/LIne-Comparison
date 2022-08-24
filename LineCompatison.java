@@ -10,10 +10,13 @@ public class LineCompatison {
         Double length2 = Math.sqrt((x4-x3)*(x4-x3) + (y4-y3)*(y4-y3));
         System.out.println("Length Of Second Line : "+length2);
 
-        if (length1.equals(length2)) {
-            System.out.println("Both the lines are equal");
+        int compare = length1.compareTo(length2);
+        if (compare < 0) {
+            System.out.println("Length of first line is less than length of second line");
+        } else if (compare > 0) {
+            System.out.println("Length of first line is greater than length of second line");
         } else {
-            System.out.println("lines are not equal");
+            System.out.println("Both the lines are equal");
         }
     }
     public static void main(String[] args) {
